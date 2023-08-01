@@ -36,8 +36,10 @@
   --spacing-lg: 32px;
   --spacing-xl: 64px;
 
-  --width-standard: 1144px;
+  --standard-width: 1144px;
 }
+
+/* General Styles */
 
 body {
   align-items: center;
@@ -51,43 +53,6 @@ body {
   margin: 0;
   padding: var(--spacing-sm) 0 0 0;
   width: 100%;
-}
-
-/* Navbar */
-
-.navbar {
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
-  max-width: var(--width-standard);
-  padding: 0 var(--spacing-md);
-  width: 100%;
-}
-
-.menu {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  list-style: none;
-}
-
-.menu a {
-  color: var(--text-light);
-  font-weight: bold;
-  margin: 0 var(--spacing-md);
-}
-
-.menu a:hover {
-  color: var(--text-light);
-  text-decoration: underline;
-}
-
-.navbar .navbar-btn {
-  background: rgba(250, 250, 250, 0.25);
-}
-
-.navbar .navbar-btn:hover {
-  background: rgba(250, 250, 250, 0.5);
 }
 
 h1 {
@@ -161,8 +126,8 @@ p {
   margin: var(--spacing-md) 0;
 }
 
-.subtitle-primary,
-.subtitle-secondary {
+.subtitle1,
+.subtitle2 {
   color: var(--purple-1);
   font-family: var(--heading-font);
   font-size: var(--subtitle-size);
@@ -170,7 +135,7 @@ p {
   line-height: var(--subtitle-height);
 }
 
-.subtitle-secondary {
+.subtitle2 {
   color: var(--blue-1);
 }
 
@@ -224,3 +189,73 @@ p {
 .with-arrow:hover > img {
   transform: translateX(4px);
 }
+
+/* Navbar */
+
+.navbar {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  max-width: var(--standard-width);
+  padding: 0 var(--spacing-md);
+  width: 100%;
+}
+
+.menu {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+.menu a {
+  color: var(--text-light);
+  font-weight: bold;
+  margin: 0 var(--spacing-md);
+}
+
+.menu a:hover {
+  color: var(--text-light);
+  text-decoration: underline;
+}
+
+.navbar .navbar-btn {
+  background: rgba(250, 250, 250, 0.25);
+}
+
+.navbar .navbar-btn:hover {
+  background: rgba(250, 250, 250, 0.5);
+}
+
+/* Layout Styles */
+
+.section-container {
+  max-width: var(--standard-width);
+  width: 100%;
+}
+
+.two-column {
+  align-items: flex-start;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.two-column > .col-left,
+.two-column > .col-right {
+  align-items: start;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 var(--spacing-md) 0 0;
+  width: 50%;
+}
+
+.two-column > .col-right {
+  padding: 0 0 0 var(--spacing-md);
+}
+
+/* Hero Content */
