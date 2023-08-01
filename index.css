@@ -417,3 +417,25 @@ p {
 #terminal-code {
   margin: var(--spacing-md) 0 0 0;
 }
+
+/* Why Swipe Section */
+
+.why-swipe-section {
+
+}
+
+.why-swipe-section .card-container {
+  display: flex;
+  margin: var(--spacing-lg) 0;
+}
+
+.why-swipe-section .card-container .card {
+  box-sizing: border-box;
+  margin: 0 var(--spacing-sm) 0 0;
+  padding: 0 var(--spacing-md) 0 0;
+  width: 25%;
+}
+
+.why-swipe-section .secondary-text {
+  color: var(--text-dark);
+}
