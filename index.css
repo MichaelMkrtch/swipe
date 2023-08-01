@@ -18,7 +18,7 @@
   /* Font Sizes */
   --btn-size: 16px;
   --h1-size: 94px;
-  --h2-size: 50px; 
+  --h2-size: 50px;
   --h3-size: 40px;
   --h4-size: 32px;
   --h5-size: 28px;
@@ -226,6 +226,27 @@ p {
   padding: 0 0 0 var(--spacing-md);
 }
 
+.card {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: var(--spacing-sm) var(--spacing-md) var(--spacing-sm) 0;
+}
+
+.card .icon {
+  height: 50px;
+  margin: 0 0 var(--spacing-sm) 0;
+}
+
+.card h3 {
+  font-family: var(--heading-font);
+  font-size: var(--h6-size);
+  font-weight: 500;
+  margin: 0;
+  width: 100%;
+}
+
 /* Navbar */
 
 .navbar {
@@ -329,10 +350,10 @@ p {
 .graphic-grid {
   display: grid;
   gap: var(--spacing-lg);
-  grid-template-areas: 
-  'credit-card slack-invoice slack-invoice'
-  'phone slack-invoice slack-invoice'
-  'phone dash dash';
+  grid-template-areas:
+    'credit-card slack-invoice slack-invoice'
+    'phone slack-invoice slack-invoice'
+    'phone dash dash';
   padding: var(--spacing-lg) 0;
 }
 
@@ -355,4 +376,44 @@ p {
 
 #dash {
   grid-area: dash;
+}
+
+/* Integrations Section */
+
+.integrations-section {
+  background-color: var(--primary-accent);
+  color: var(--text-light);
+}
+
+.integrations-section .primary-btn {
+  background-color: var(--blue-1);
+  color: var(--primary-accent);
+  margin: var(--spacing-md) 0 0 0;
+}
+
+.integrations-section .primary-btn:hover {
+  background-color: var(--bg-white);
+}
+
+.integrations-section .card-container {
+  display: flex;
+  margin: var(--spacing-lg) 0;
+}
+
+.integrations-section .card-container .card {
+  width: 50%;
+}
+
+.integrations-section .secondary-btn {
+  color: var(--blue-1);
+}
+
+#api-code,
+#terminal-code {
+  border-radius: 20px;
+  max-width: 470px;
+}
+
+#terminal-code {
+  margin: var(--spacing-md) 0 0 0;
 }
