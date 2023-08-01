@@ -16,7 +16,7 @@
   /* Font Sizes */
   --btn-size: 16px;
   --h1-size: 94px;
-  --h2-size: 50px;
+  --h2-size: 50px; 
   --h3-size: 40px;
   --h4-size: 32px;
   --h5-size: 28px;
@@ -35,7 +35,7 @@
   --spacing-md: 16px;
   --spacing-lg: 32px;
   --spacing-xl: 64px;
-
+  /* Width */
   --standard-width: 1144px;
 }
 
@@ -71,10 +71,9 @@ h1 {
 
 h2 {
   font-family: var(--heading-font);
-  font-size: var(--h2-size);
-  font-weight: 500;
+  font-size: var(--h3-size);
+  font-weight: 600;
   letter-spacing: -0.25px;
-  line-height: var(--h2-height);
   margin: 0;
   width: 100%;
 }
@@ -301,4 +300,24 @@ p {
 .partners-grid img {
   height: 60px;
   place-self: center;
+}
+
+/* Unified Platform Section */
+
+.unified-platform-section {
+  padding: var(--spacing-xl) 0;
+}
+
+.unified-platform-section h2 {
+  margin-bottom: var(--spacing-md);
+  width: 50%;
+}
+
+.unified-platform-section .primary-btn {
+  background-color: var(--purple-1);
+  margin: var(--spacing-md) 0;
+}
+
+.unified-platform-section .primary-btn:hover {
+  background-color: var(--primary-accent);
 }
