@@ -1,4 +1,6 @@
 :root {
+  /* Box Shadow */
+  --standard-box-shadow: 0px 2px 40px rgba(0, 0, 0, 0.15);
   /* Colors */
   --bg-white: #fff;
   --bg-light: #f7f9fc;
@@ -320,4 +322,37 @@ p {
 
 .unified-platform-section .primary-btn:hover {
   background-color: var(--primary-accent);
+}
+
+/* Graphic Grid Section */
+
+.graphic-grid {
+  display: grid;
+  gap: var(--spacing-lg);
+  grid-template-areas: 
+  'credit-card slack-invoice slack-invoice'
+  'phone slack-invoice slack-invoice'
+  'phone dash dash';
+  padding: var(--spacing-lg) 0;
+}
+
+.graphic-grid img {
+  box-shadow: var(--standard-box-shadow);
+  width: 100%;
+}
+
+#credit-card {
+  grid-area: credit-card;
+}
+
+#slack-invoice {
+  grid-area: slack-invoice;
+}
+
+#phone {
+  grid-area: phone;
+}
+
+#dash {
+  grid-area: dash;
 }
