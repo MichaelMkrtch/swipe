@@ -43,7 +43,7 @@
 
 body {
   align-items: center;
-  background-color: var(--purple-1);
+  background-color: var(--bg-white);
   box-sizing: border-box;
   color: var(--text-dark);
   display: flex;
@@ -53,6 +53,10 @@ body {
   margin: 0;
   padding: var(--spacing-sm) 0 0 0;
   width: 100%;
+}
+
+main {
+  margin: var(--spacing-xl) 0;
 }
 
 h1 {
@@ -190,6 +194,37 @@ p {
   transform: translateX(4px);
 }
 
+/* Layout Styles */
+
+.section-container {
+  max-width: var(--standard-width);
+  width: 100%;
+}
+
+.two-column {
+  align-items: flex-start;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.two-column > .col-left,
+.two-column > .col-right {
+  align-items: start;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 var(--spacing-md) 0 0;
+  width: 50%;
+}
+
+.two-column > .col-right {
+  padding: 0 0 0 var(--spacing-md);
+}
+
 /* Navbar */
 
 .navbar {
@@ -227,35 +262,43 @@ p {
   background: rgba(250, 250, 250, 0.5);
 }
 
-/* Layout Styles */
-
-.section-container {
-  max-width: var(--standard-width);
-  width: 100%;
-}
-
-.two-column {
-  align-items: flex-start;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  width: 100%;
-}
-
-.two-column > .col-left,
-.two-column > .col-right {
-  align-items: start;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 0 var(--spacing-md) 0 0;
-  width: 50%;
-}
-
-.two-column > .col-right {
-  padding: 0 0 0 var(--spacing-md);
-}
-
 /* Hero Content */
+
+.hero p {
+  max-width: 480px;
+}
+
+.btn-container {
+  display: flex;
+  margin: var(--spacing-md) 0;
+}
+
+.btn-container button:nth-of-type(2) {
+  color: var(--purple-2);
+  margin: 0 0 0 var(--spacing-md);
+}
+
+.hero .hero-phone-container {
+  align-items: flex-end;
+  height: 564px;
+}
+
+.hero-phone {
+  height: 628px;
+  transform: translate(32px, -32px);
+}
+
+/* Partners Section */
+
+.partners-grid {
+  display: grid;
+  gap: var(--spacing-lg) var(--spacing-md);
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  margin: var(--spacing-xl) 0;
+}
+
+.partners-grid img {
+  height: 60px;
+  place-self: center;
+}
