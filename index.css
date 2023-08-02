@@ -7,6 +7,13 @@
   --primary-btn-hover: #6d7a88;
   --blue-1: #00d4ff;
   --primary-accent: #0a2540;
+  --primary-gradient: linear-gradient(
+    101.33deg,
+    #08209a 0.76%,
+    #6563ff 33.33%,
+    #36c5f0 76.92%,
+    #83e2ff 96.96%
+  );
   --purple-1: #6962f7;
   --purple-2: #7000ff;
   --text-dark: #000;
@@ -510,4 +517,87 @@ p {
   opacity: 25%;
   position: absolute;
   top: 5%;
+}
+
+/* Virtual Events Sedtion */
+
+.virtual-events-section {
+  display: flex;
+  justify-content: center;
+  padding: calc(var(--spacing-xl) * 2) 0;
+  width: 100%;
+}
+
+.virtual-events-section .col-left {
+  height: 446px;
+  padding: 0 var(--spacing-xl) 0 0;
+}
+
+.virtual-events-section .primary-btn {
+  background-color: var(--purple-1);
+  margin: var(--spacing-md) 0 0 0;
+}
+
+.virtual-events-section .primary-btn:hover {
+  background-color: var(--primary-accent);
+}
+
+.swipe-sessions-card {
+  box-shadow: var(--standard-box-shadow);
+  border-radius: 20px;
+  height: 446px;
+  overflow: hidden;
+  width: 540px;
+}
+
+.swipe-sessions-card .card-top {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 50%;
+  position: relative;
+  width: 100%;
+}
+
+.swipe-sessions-card .card-top::before {
+  background: var(--primary-gradient);
+  content: '';
+  height: 150%;
+  position: absolute;
+  top: -40%;
+  transform: skewY(-5deg);
+  width: 100%;
+  z-index: -1;
+}
+
+#sessions-logo {
+  width: 338px;
+}
+
+.swipe-sessions-card .avatars {
+  bottom: -70px;
+  left: var(--spacing-xl);
+  position: absolute;
+}
+
+.swipe-sessions-card .avatars img {
+  width: 80px;
+}
+
+.swipe-sessions-card .avatars img:nth-of-type(2) {
+  position: absolute;
+  left: 60px;
+}
+
+.swipe-sessions-card .card-bottom {
+  box-sizing: border-box;
+  height: 50%;
+  padding: calc(var(--spacing-xl) * 1.2);
+  width: 100%;
+}
+
+.swipe-sessions-card .card-bottom .secondary-text {
+  color: var(--text-dark);
+  font-weight: 600;
+  width: 50%;
 }
