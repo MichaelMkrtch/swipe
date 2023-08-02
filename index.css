@@ -810,6 +810,13 @@ p {
   }
 }
 
+@media only screen and (max-width: 825px) {
+  /* Virtual Events Section */
+  #sessions-logo {
+    transform: translateX(-72px);
+  }
+}
+
 @media only screen and (max-width: 768px) {
   /* Unified Platform Section */
   .unified-platform-section h2 {
@@ -834,6 +841,11 @@ p {
   .global-section .card-container .card {
     margin: var(--spacing-md) 0;
     width: 50%;
+  }
+
+  /* Virtual Events Section */
+  #sessions-logo {
+    transform: translateX(-80px);
   }
 }
 
@@ -878,6 +890,33 @@ p {
 
   #globe {
     opacity: 10%;
+  }
+
+  /* Virtual Events Section */
+  .virtual-events-section .section-container .col-left {
+    height: 375px;
+    margin: 0 0 var(--spacing-md) 0;
+  }
+
+  .virtual-events-section .swipe-sessions-card {
+    height: 375px;
+  }
+
+  .virtual-events-section .swipe-sessions-card .card-top {
+    height: 40%;
+  }
+
+  .virtual-events-section .swipe-sessions-card {
+    width: 100%;
+  }
+
+  .virtual-events-section .swipe-sessions-card .secondary-text {
+    width: 100%;
+  }
+
+  #sessions-logo {
+    width: 300px;
+    transform: translateX(0);
   }
 }
 
