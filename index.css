@@ -261,6 +261,7 @@ p {
 
 .navbar {
   align-items: center;
+  box-sizing: border-box;
   display: flex;
   justify-content: space-between;
   padding: 0 var(--spacing-md);
@@ -293,6 +294,10 @@ p {
 
 .navbar .navbar-btn:hover {
   background: rgba(250, 250, 250, 0.5);
+}
+
+.hamburger-btn {
+  display: none;
 }
 
 /* Animated Gradient */
@@ -818,6 +823,37 @@ p {
 }
 
 @media only screen and (max-width: 768px) {
+  /* Navbar Styles */
+  .navbar {
+    margin: var(--spacing-sm) var(--spacing-lg);
+  }
+
+  .navbar .menu {
+    display: none;
+  }
+
+  .navbar .navbar-btn {
+    display: none;
+  }
+
+  .hamburger-btn {
+    align-items: center;
+    background-color: rgba(250, 250, 250, 0.25);
+    border-radius: var(--standard-border-radius);
+    display: flex;
+    flex-direction: column;
+    height: 30px;
+    justify-content: center;
+    width: 50px;
+  }
+
+  .hamburger-btn .bar {
+    background-color: var(--bg-white);
+    height: 2px;
+    margin: 2px 0;
+    width: 18px;
+  }
+
   /* Unified Platform Section */
   .unified-platform-section h2 {
     width: 100%;
