@@ -1,4 +1,6 @@
 :root {
+  /* Border Radius */
+  --standard-border-radius: 20px;
   /* Box Shadow */
   --standard-box-shadow: 0px 2px 40px rgba(0, 0, 0, 0.15);
   /* Colors */
@@ -163,7 +165,7 @@ p {
 .secondary-btn {
   background-color: var(--primary-accent);
   border: none;
-  border-radius: 20px;
+  border-radius: var(--standard-border-radius);
   color: var(--text-light);
   font-family: var(--body-font);
   font-size: var(--btn-size);
@@ -405,6 +407,7 @@ p {
 }
 
 .graphic-grid img {
+  border-radius: var(--standard-border-radius);
   box-shadow: var(--standard-box-shadow);
   width: 100%;
 }
@@ -418,6 +421,7 @@ p {
 }
 
 #phone {
+  box-shadow: none;
   grid-area: phone;
 }
 
@@ -449,6 +453,17 @@ p {
   z-index: 1;
 }
 
+.integrations-section::after {
+  background-color: var(--bg-light);
+  content: '';
+  height: 50%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -2;
+}
+
 .integrations-section .primary-btn {
   background-color: var(--blue-1);
   color: var(--primary-accent);
@@ -474,7 +489,7 @@ p {
 
 #api-code,
 #terminal-code {
-  border-radius: 20px;
+  border-radius: var(--standard-border-radius);
   max-width: 470px;
 }
 
@@ -600,7 +615,7 @@ p {
 
 .swipe-sessions-card {
   box-shadow: var(--standard-box-shadow);
-  border-radius: 20px;
+  border-radius: var(--standard-border-radius);
   height: 446px;
   overflow: hidden;
   width: 540px;
