@@ -767,3 +767,35 @@ p {
   color: var(--purple-1);
   text-decoration: underline;
 }
+
+/* Media Queries */
+
+@media only screen and (max-width: 1155px) {
+  .section-container {
+    padding: 0 var(--spacing-md);
+  }
+}
+
+/* Tablet Size */
+@media only screen and (max-width: 850px) {
+  :root {
+    --h1-size: 64px;
+    --h1-height: 72px;
+    --h3-size: 34px;
+  }
+
+  .partners-grid img {
+    height: auto;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+}
+
+/* Mobile Size */
+@media only screen and (max-width: 570px) {
+  .partners-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
