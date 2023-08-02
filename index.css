@@ -348,6 +348,7 @@ p {
 /* Unified Platform Section */
 
 .unified-platform-section {
+  background-color: var(--bg-light);
   display: flex;
   justify-content: center;
   padding: var(--spacing-xl) 0;
@@ -371,6 +372,7 @@ p {
 /* Graphic Grid Section */
 
 .graphic-section {
+  background-color: var(--bg-light);
   display: flex;
   justify-content: center;
   width: 100%;
@@ -409,12 +411,26 @@ p {
 
 /* Integrations Section */
 
-.integrations-section {
+.integrations-section::before {
   background-color: var(--primary-accent);
+  content: '';
+  height: 1100px;
+  left: 0;
+  position: absolute;
+  top: -32px;
+  transform: skewY(-10deg);
+  width: 100%;
+  z-index: -1;
+}
+
+.integrations-section {
   color: var(--text-light);
   display: flex;
   justify-content: center;
+  padding: calc(var(--spacing-xl) * 3) 0;
+  position: relative;
   width: 100%;
+  z-index: 1;
 }
 
 .integrations-section .primary-btn {
@@ -455,6 +471,7 @@ p {
 .why-swipe-section {
   display: flex;
   justify-content: center;
+  padding: calc(var(--spacing-xl) * 3) 0;
   width: 100%;
 }
 
@@ -476,12 +493,23 @@ p {
 
 /* Global Scale Section */
 
-.global-section {
+.global-section::before {
   background-color: var(--primary-accent);
+  content: '';
+  height: 1200px;
+  left: 0;
+  position: absolute;
+  top: -32px;
+  transform: skewY(-10deg);
+  width: 100%;
+  z-index: -1;
+}
+
+.global-section {
   color: var(--text-light);
   display: flex;
   justify-content: center;
-  padding: calc(var(--spacing-xl) * 3) 0;
+  padding: calc(var(--spacing-xl) * 3) 0 0 0;
   position: relative;
   width: 100%;
 }
@@ -521,10 +549,22 @@ p {
 
 /* Virtual Events Sedtion */
 
+.virtual-events-section::before {
+  background-color: var(--bg-white);
+  content: '';
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: -32px;
+  width: 100%;
+  z-index: -1;
+}
+
 .virtual-events-section {
   display: flex;
   justify-content: center;
   padding: calc(var(--spacing-xl) * 2) 0;
+  position: relative;
   width: 100%;
 }
 
@@ -550,15 +590,6 @@ p {
   width: 540px;
 }
 
-.swipe-sessions-card .card-top {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  height: 50%;
-  position: relative;
-  width: 100%;
-}
-
 .swipe-sessions-card .card-top::before {
   background: var(--primary-gradient);
   content: '';
@@ -568,6 +599,15 @@ p {
   transform: skewY(-5deg);
   width: 100%;
   z-index: -1;
+}
+
+.swipe-sessions-card .card-top {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 50%;
+  position: relative;
+  width: 100%;
 }
 
 #sessions-logo {
