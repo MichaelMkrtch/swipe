@@ -791,10 +791,25 @@ p {
 }
 
 @media only screen and (max-width: 768px) {
+  .unified-platform-section h2 {
+    width: 100%;
+  }
 }
 
 /* Mobile Size */
 @media only screen and (max-width: 570px) {
+  /* Layout Styles */
+  .two-column {
+    flex-direction: column;
+  }
+
+  .two-column .col-left,
+  .two-column .col-right {
+    padding: 0;
+    width: 100%;
+  }
+
+  /* Partners Grid */
   .partners-grid {
     grid-template-columns: 1fr 1fr;
   }
