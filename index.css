@@ -2,11 +2,11 @@
   /* Box Shadow */
   --standard-box-shadow: 0px 2px 40px rgba(0, 0, 0, 0.15);
   /* Colors */
-  --bg-white: #fff;
   --bg-light: #f7f9fc;
-  --primary-btn-hover: #6d7a88;
+  --bg-white: #fff;
   --blue-1: #00d4ff;
   --primary-accent: #0a2540;
+  --primary-btn-hover: #6d7a88;
   --primary-gradient: linear-gradient(
     101.33deg,
     #08209a 0.76%,
@@ -261,8 +261,9 @@ p {
   align-items: center;
   display: flex;
   justify-content: space-between;
-  max-width: var(--standard-width);
   padding: 0 var(--spacing-md);
+  margin: 0 0 var(--spacing-xl) 0;
+  max-width: var(--standard-width);
   width: 100%;
 }
 
@@ -290,6 +291,21 @@ p {
 
 .navbar .navbar-btn:hover {
   background: rgba(250, 250, 250, 0.5);
+}
+
+/* Animated Gradient */
+#animated-gradient {
+  --gradient-color-1: #ef008f;
+  --gradient-color-2: #6ec3f4;
+  --gradient-color-3: #7038ff;
+  --gradient-color-4: #ffba27;
+  height: 970px;
+  left: -50%;
+  position: absolute;
+  top: -600px;
+  transform: rotate(-10deg);
+  width: 200%;
+  z-index: -1;
 }
 
 /* Hero Content */
