@@ -265,7 +265,7 @@ p {
   display: flex;
   justify-content: space-between;
   padding: 0 var(--spacing-md);
-  margin: 0 0 var(--spacing-xl) 0;
+  margin: var(--spacing-sm) 0 var(--spacing-xl) 0;
   max-width: var(--standard-width);
   width: 100%;
 }
@@ -781,8 +781,29 @@ p {
   }
 }
 
+@media only screen and (max-width: 1150px) {
+  :root {
+    --h1-height: 85px;
+    --h1-size: 80px;
+  }
+
+  /* Hero Section */
+  .hero .col-left {
+    width: 60%;
+  }
+
+  .hero .col-right {
+    width: 40%;
+  }
+
+  .hero-phone {
+    height: 600px;
+    transform: translate(10px, -70px);
+  }
+}
+
 /* Tablet Size */
-@media only screen and (max-width: 850px) {
+@media only screen and (max-width: 880px) {
   :root {
     --h1-size: 64px;
     --h1-height: 72px;
@@ -823,9 +844,19 @@ p {
 }
 
 @media only screen and (max-width: 768px) {
+  :root {
+    --h1-size: 58px;
+    --h1-height: 65px;
+  }
+
+  main {
+    margin: 0;
+  }
+
   /* Navbar Styles */
   .navbar {
-    margin: var(--spacing-sm) var(--spacing-lg);
+    margin: var(--spacing-md) var(--spacing-lg);
+    padding: var(--spacing-sm) var(--spacing-lg);
   }
 
   .navbar .menu {
@@ -852,6 +883,28 @@ p {
     height: 2px;
     margin: 2px 0;
     width: 18px;
+  }
+
+  /* Hero Section */
+  #animated-gradient {
+    height: 900px;
+  }
+
+  .hero .two-column {
+    align-items: center;
+  }
+
+  .hero .col-left {
+    width: 60%;
+  }
+
+  .hero .col-right {
+    width: 40%;
+  }
+
+  .hero-phone {
+    height: 450px;
+    transform: translate(25px, 5px);
   }
 
   /* Unified Platform Section */
@@ -904,7 +957,19 @@ p {
 }
 
 /* Mobile Size */
-@media only screen and (max-width: 570px) {
+@media only screen and (max-width: 600px) {
+  :root {
+    --h1-size: 58px;
+    --h1-height: 65px;
+  }
+
+  /* Navbar Styles */
+  .navbar {
+    margin: var(--spacing-sm) var(--spacing-sm) var(--spacing-lg)
+      var(--spacing-sm);
+    padding: var(--spacing-sm) var(--spacing-md);
+  }
+
   /* Layout Styles */
   .two-column {
     flex-direction: column;
@@ -918,6 +983,15 @@ p {
 
   .card .icon {
     height: 35px;
+  }
+
+  /* Hero Section */
+  #animated-gradient {
+    height: 822px;
+  }
+
+  .hero .two-column .hero-phone-container {
+    display: none;
   }
 
   /* Partners Grid */
