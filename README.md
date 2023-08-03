@@ -1,6 +1,6 @@
 # Swipe Project
 
-View the live website [here](michaelmkrtch.github.io/swipe/)
+View the live website [here](https://michaelmkrtch.github.io/swipe/)
 
 This website was built using HTML, CSS, and JS. The primary CSS topics covered include flexbox, grid, `::before` and `::after` pseudo-elements, and animations.
 
