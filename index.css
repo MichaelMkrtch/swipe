@@ -52,6 +52,13 @@
 
 /* General Styles */
 
+html,
+body {
+  overflow-x: hidden;
+  position: relative;
+  width: 100%;
+}
+
 body {
   align-items: center;
   background-color: var(--bg-white);
@@ -63,7 +70,6 @@ body {
   justify-content: center;
   margin: 0;
   padding: var(--spacing-sm) 0 0 0;
-  width: 100%;
 }
 
 main {
@@ -134,6 +140,8 @@ a:hover {
   color: var(--primary-accent);
 }
 
+/* Text Styles */
+
 p {
   font-size: var(--p-size);
   font-weight: 400;
@@ -160,6 +168,8 @@ p {
   letter-spacing: 0.25px;
   line-height: var(--secondary-text-height);
 }
+
+/* Button Styles */
 
 .primary-btn,
 .secondary-btn {
@@ -301,6 +311,7 @@ p {
 }
 
 /* Animated Gradient */
+
 #animated-gradient {
   --gradient-color-1: #ef008f;
   --gradient-color-2: #6ec3f4;
@@ -1141,11 +1152,4 @@ p {
   .footer .col a {
     font-size: 12px;
   }
-}
-
-html,
-body {
-  overflow-x: hidden;
-  position: relative;
-  width: 100%;
 }
